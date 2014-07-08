@@ -1,4 +1,5 @@
 ﻿using Hakomo.Library;
+using System;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Windows.Forms;
@@ -22,6 +23,7 @@ namespace Restore {
             }
         }
 
+        [STAThread]
         private static void Main() {
             foreach(WinAPI.Placement p in File)
                 p.Restore();

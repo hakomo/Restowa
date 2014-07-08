@@ -8,7 +8,8 @@ using System.Windows.Forms;
 namespace Save {
 
     class Save {
-
+        
+        [STAThread]
         private static void Main() {
             List<WinAPI.Placement> placements = new List<WinAPI.Placement>();
             foreach(IntPtr hw in WinAPI.GetTasks())
